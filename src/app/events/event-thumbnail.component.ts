@@ -1,4 +1,4 @@
-import { Component , Input, Output, EventEmitter} from '@angular/core'
+import { Component , Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
 
@@ -28,12 +28,12 @@ import { Component , Input, Output, EventEmitter} from '@angular/core'
 
 export class EventsThumbnailComponent {
   @Input() event: any ;
-  @Output() eventClick = new EventEmitter()
+  @Output() eventClick = new EventEmitter();
+  property: any = 'value';
   handleClickMe() {
-    this.eventClick.emit(this.event.name)
+    this.eventClick.emit(this.event.name);
   }
-  property :any = "value"
   logFoo() {
-    console.log("Foo")
+    console.log('Foo');
   }
 }
