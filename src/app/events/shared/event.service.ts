@@ -8,7 +8,7 @@ export class EventService {
   constructor() { }
 
   getEvents() {
-      return EVENTS
+      return EVENTS;
   }
 }
 
