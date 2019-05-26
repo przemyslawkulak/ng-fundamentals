@@ -32,6 +32,6 @@ ngOnInit() {
 }
 
 handleThumbnailClick(eventName) {
-  this.toastr.success(eventName);
+  toastr.success(eventName);
 }
 }
