@@ -15,6 +15,7 @@ import { AppComponent } from './events-app.component';
 import { NavComponent } from './nav/nav.component';
 import { ToastrService } from './common/toastr.service';
 import { ErrorComponent } from './error/error.component';
+import { AuthService } from './user/auth.service';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { ErrorComponent } from './error/error.component';
     ToastrService,
     EventRouteActivatorService,
     EventListResolverService,
+    AuthService,
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState

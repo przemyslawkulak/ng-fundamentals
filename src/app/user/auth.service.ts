@@ -9,8 +9,10 @@ export class AuthService {
     id: 1,
     userName: userName,
     firstName: 'John',
-    lastName:'Papa'
-    }
+    lastName: 'Papa'
+    };
   }
-
+  isAuthenticated() {
+    return !!this.currentUser;
+  }
 }
