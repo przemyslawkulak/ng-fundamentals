@@ -14,8 +14,8 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) {
 
   }
-  password;
-  userName;
+  password: any;
+  userName: any;
   mouseoverLogin;
 
   login(formValue) {
