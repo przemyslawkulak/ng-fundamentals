@@ -16,6 +16,7 @@ import { NavComponent } from './nav/nav.component';
 import { ToastrService } from './common/toastr.service';
 import { ErrorComponent } from './error/error.component';
 import { AuthService } from './user/auth.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +25,9 @@ import { AuthService } from './user/auth.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     EventService,
