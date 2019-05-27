@@ -5,10 +5,11 @@ import { EventsDetailsComponent } from './events/events-details/events-details.c
 import { CreateEventComponent } from './events/create-event/create-event.component';
 import { ErrorComponent } from './error/error.component';
 import { EventRouteActivatorService } from './events/events-details/event-route-activator.service';
+import { EventListResolverService } from './events/event-list-resolver.service';
 
 const routes: Routes = [
   { path: 'events/new', component: CreateEventComponent, canDeactivate: ['canDeactivateCreateEvent'] },
-  { path: 'events', component: EventsListComponent },
+  { path: 'events', component: EventsListComponent, resolve: {events: EventListResolverService} },
   { path: 'events/:id', component: EventsDetailsComponent, canActivate: [EventRouteActivatorService] },
   { path: '', redirectTo: '/events', pathMatch: 'full'},
   { path: '404', component: ErrorComponent },
