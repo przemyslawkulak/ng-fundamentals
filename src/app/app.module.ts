@@ -13,11 +13,12 @@ import { CreateEventComponent } from './events/create-event/create-event.compone
 import { ErrorComponent } from './error/error.component';
 import { EventRouteActivatorService } from './events/events-details/event-route-activator.service';
 import { EventListResolverService} from './events/event-list-resolver.service';
+import { ProfileComponent } from './user/profile.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, EventsListComponent, EventsThumbnailComponent, NavComponent, EventsDetailsComponent, CreateEventComponent, ErrorComponent
+    AppComponent, EventsListComponent, EventsThumbnailComponent, NavComponent, EventsDetailsComponent, CreateEventComponent, ErrorComponent, ProfileComponent
   ],
   imports: [
     BrowserModule,
