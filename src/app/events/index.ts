@@ -6,3 +6,4 @@ export * from './events-list.component';
 export * from './event-list-resolver.service';
 export * from './shared/event.service';
 export * from './shared/event.model';
+export * from './events-details/create-session.component';

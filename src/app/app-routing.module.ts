@@ -6,7 +6,8 @@ import {
   EventsDetailsComponent,
   CreateEventComponent,
   EventListResolverService,
-  EventRouteActivatorService
+  EventRouteActivatorService,
+  CreateComponentComponent
 } from './events/index';
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/events', pathMatch: 'full'},
   { path: '404', component: ErrorComponent },
   { path: 'user', loadChildren: './user/user.module#UsersModule'},
+  { path: 'events/session/new', component: CreateComponentComponent}
 ];
 
 @NgModule({

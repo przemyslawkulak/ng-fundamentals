@@ -8,7 +8,8 @@ import {
   EventsDetailsComponent,
   CreateEventComponent,
   EventRouteActivatorService,
-  EventListResolverService
+  EventListResolverService,
+  CreateComponentComponent
 } from './events/index';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './events-app.component';
@@ -21,7 +22,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent, EventsListComponent, EventsThumbnailComponent, NavComponent, EventsDetailsComponent, CreateEventComponent, ErrorComponent
+    AppComponent,
+    EventsListComponent,
+    EventsThumbnailComponent,
+     NavComponent,
+     EventsDetailsComponent,
+     CreateEventComponent,
+     ErrorComponent,
+     CreateComponentComponent
   ],
   imports: [
     BrowserModule,
