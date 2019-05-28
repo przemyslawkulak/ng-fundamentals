@@ -9,6 +9,7 @@ import { EventService } from '../shared/event.service';
 })
 export class CreateEventComponent {
   isDirty = true;
+  newEvent;
   constructor(private router: Router, private eventService: EventService) { }
 
   saveEvent(formValues) {
