@@ -11,7 +11,8 @@ import {
   EventListResolverService,
   CreateComponentComponent,
   SessionListComponent,
-  DurationPipe
+  DurationPipe,
+  UpvoteComponent,
 } from './events/index';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './events-app.component';
@@ -24,6 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
 import { SimpleModalComponent } from './common/simpleModal.component';
 import { ModalTriggerDirective } from './common/modal-trigger.directive';
+import { VoterService } from './events/events-details/voter.service';
 
 
 let toastr: Toastr = window['toastr'];
@@ -43,6 +45,7 @@ let jQuery = window['$'];
      CollapsibleWellComponent,
      DurationPipe,
      SimpleModalComponent,
+     UpvoteComponent,
      ModalTriggerDirective
   ],
   imports: [
@@ -58,6 +61,7 @@ let jQuery = window['$'];
 
     EventRouteActivatorService,
     EventListResolverService,
+    VoterService,
     AuthService,
     {
       provide: 'canDeactivateCreateEvent',

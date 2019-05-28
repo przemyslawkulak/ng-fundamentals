@@ -9,3 +9,4 @@ export * from './shared/event.model';
 export * from './events-details/create-session.component';
 export * from './events-details/session-list.component';
 export * from './shared/duration.pipe';
+export * from './events-details/upvote.component';
