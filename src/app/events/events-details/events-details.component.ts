@@ -11,6 +11,7 @@ import { IEvent, ISession } from '../shared/event.model';
 export class EventsDetailsComponent implements OnInit {
   event: IEvent;
   addMode: boolean;
+  filterBy: string = 'all';
   constructor(private eventService: EventService, private route: ActivatedRoute) { }
 
   ngOnInit() {
