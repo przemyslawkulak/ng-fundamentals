@@ -23,6 +23,7 @@ import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
 import { SimpleModalComponent } from './common/simpleModal.component';
+import { ModalTriggerDirective } from './common/modal-trigger.directive';
 
 
 let toastr: Toastr = window['toastr']
@@ -42,6 +43,7 @@ let jQuery = window['$']
      CollapsibleWellComponent,
      DurationPipe,
      SimpleModalComponent,
+     ModalTriggerDirective
   ],
   imports: [
     BrowserModule,
@@ -52,6 +54,8 @@ let jQuery = window['$']
   providers: [
     EventService,
     {provide: TOASTR_TOKEN, useValue: toastr },
+    {provide: JQ_TOKEN, useValue: jQuery },
+
     EventRouteActivatorService,
     EventListResolverService,
     AuthService,
