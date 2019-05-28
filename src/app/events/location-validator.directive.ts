@@ -5,17 +5,21 @@ import { Validator, FormGroup, NG_VALIDATORS } from '@angular/forms';
   selector: '[validateLocation]',
   providers: [{provide: NG_VALIDATORS, useExisting: LocationValidatorDirective, multi: true}]
 })
-export class LocationValidatorDirective implements Validator{
+export class LocationValidatorDirective implements Validator {
   validate(formGroup: FormGroup): { [key: string]: any} {
+// tslint:disable-next-line: prefer-const
     let addressControl = formGroup.controls['address'];
+// tslint:disable-next-line: prefer-const
     let cityControl = formGroup.controls['city'];
+// tslint:disable-next-line: prefer-const
     let countryControl = formGroup.controls['country'];
+// tslint:disable-next-line: prefer-const
     let onlineUrlControl = (<FormGroup>formGroup.root).controls['onlineUrl'];
 
-    if((addressControl && addressControl.value && cityControl && cityControl.value && countryControl && countryControl.value) || (onlineUrlControl && onlineUrlControl.value)) {
+    if ((addressControl && addressControl.value && cityControl && cityControl.value && countryControl && countryControl.value) || (onlineUrlControl && onlineUrlControl.value)) {
       return null;
     } else {
-      return {validateLocation: false}
+      return {validateLocation: false};
     }
   }
 }
