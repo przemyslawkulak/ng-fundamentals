@@ -17,13 +17,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './events-app.component';
 import { NavComponent } from './nav/nav.component';
 import { TOASTR_TOKEN, Toastr } from './common/toastr.service';
+import { JQ_TOKEN } from './common/jQuery.service';
 import { ErrorComponent } from './error/error.component';
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
+import { SimpleModalComponent } from './common/simpleModal.component';
 
 
-declare let toastr: Toastr;
+let toastr: Toastr = window['toastr']
+let jQuery = window['$']
 
 @NgModule({
   declarations: [
@@ -38,6 +41,7 @@ declare let toastr: Toastr;
      SessionListComponent,
      CollapsibleWellComponent,
      DurationPipe,
+     SimpleModalComponent,
   ],
   imports: [
     BrowserModule,
