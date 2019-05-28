@@ -26,8 +26,8 @@ import { SimpleModalComponent } from './common/simpleModal.component';
 import { ModalTriggerDirective } from './common/modal-trigger.directive';
 
 
-const toastr: Toastr = window.toastr;
-const jQuery = window.$;
+let toastr: Toastr = window['toastr'];
+let jQuery = window['$'];
 
 @NgModule({
   declarations: [
