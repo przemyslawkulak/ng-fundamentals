@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import {
   EventsListComponent,
@@ -29,8 +30,10 @@ import { ModalTriggerDirective } from './common/modal-trigger.directive';
 import { VoterService } from './events/events-details/voter.service';
 
 
-let toastr: Toastr = window['toastr'];
-let jQuery = window['$'];
+// tslint:disable-next-line: no-string-literal
+const toastr: Toastr = window['toastr'];
+// tslint:disable-next-line: no-string-literal
+const jQuery = window['$'];
 
 @NgModule({
   declarations: [
@@ -55,6 +58,7 @@ let jQuery = window['$'];
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     EventService,

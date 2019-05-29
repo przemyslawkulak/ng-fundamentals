@@ -1,13 +1,15 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
 import { IEvent, ISession } from './event.model';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class EventService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getEvents(): Observable<IEvent[]> {
     const subject = new Subject<IEvent[]>();

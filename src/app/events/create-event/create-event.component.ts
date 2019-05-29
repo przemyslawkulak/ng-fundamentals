@@ -8,7 +8,7 @@ import { EventService } from '../shared/event.service';
   styleUrls: ['./create-event.component.css']
 })
 export class CreateEventComponent {
-  isDirty = false;
+  isDirty:boolean = true;
   newEvent;
   constructor(private router: Router, private eventService: EventService) { }
 
