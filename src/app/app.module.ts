@@ -8,13 +8,13 @@ import {
   EventService,
   EventsDetailsComponent,
   CreateEventComponent,
-  EventRouteActivatorService,
   EventListResolverService,
   CreateComponentComponent,
   SessionListComponent,
   DurationPipe,
   UpvoteComponent,
   LocationValidatorDirective,
+  EventResolverService,
 } from './events/index';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './events-app.component';
@@ -65,7 +65,7 @@ const jQuery = window['$'];
     {provide: TOASTR_TOKEN, useValue: toastr },
     {provide: JQ_TOKEN, useValue: jQuery },
 
-    EventRouteActivatorService,
+    EventResolverService,
     EventListResolverService,
     VoterService,
     AuthService,

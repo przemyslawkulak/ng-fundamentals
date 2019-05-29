@@ -13,7 +13,7 @@ import { Component, Input } from '@angular/core';
 })
 
 export class CollapsibleWellComponent {
-  visible = false;
+  visible = true;
 
   toggleContent() {
     this.visible = !this.visible;

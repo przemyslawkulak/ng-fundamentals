@@ -6,14 +6,14 @@ import {
   EventsDetailsComponent,
   CreateEventComponent,
   EventListResolverService,
-  EventRouteActivatorService,
-  CreateComponentComponent
+  CreateComponentComponent,
+  EventResolverService
 } from './events/index';
 
 const routes: Routes = [
   { path: 'events/new', component: CreateEventComponent, canDeactivate: ['canDeactivateCreateEvent'] },
   { path: 'events', component: EventsListComponent, resolve: {events: EventListResolverService} },
-  { path: 'events/:id', component: EventsDetailsComponent, canActivate: [EventRouteActivatorService] },
+  { path: 'events/:id', component: EventsDetailsComponent, resolve: {event: EventResolverService} },
   { path: '', redirectTo: '/events', pathMatch: 'full'},
   { path: '404', component: ErrorComponent },
   { path: 'user', loadChildren: './user/user.module#UsersModule'},

@@ -1,6 +1,5 @@
 export * from './create-event/create-event.component';
 export * from './events-details/events-details.component';
-export * from './events-details/event-route-activator.service';
 export * from './event-thumbnail.component';
 export * from './events-list.component';
 export * from './event-list-resolver.service';
@@ -11,3 +10,5 @@ export * from './events-details/session-list.component';
 export * from './shared/duration.pipe';
 export * from './events-details/upvote.component';
 export * from './location-validator.directive';
+export * from './event-resolver.service';
+
