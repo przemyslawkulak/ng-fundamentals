@@ -8,7 +8,7 @@ import { IEvent } from './shared/event.model';
   template: `
   <div [routerLink]="['/events', event.id]" class="well hoverwell thumbnail">
       <h2>{{event?.name | uppercase}}</h2>
-      <div>Date: {{event?.date | date:'d/M/y'}}</div>
+      <div>Date: {{event?.date | date:'shortDate'}}</div>
       <div [ngClass]="getStartTimeClass()" [ngSwitch]="event?.time">Time: {{event?.time}}
         <span *ngSwitchCase="'8:00 am'"> (Early start)</span>
         <span *ngSwitchCase="'10:00 am'"> (Late start)</span>
