@@ -17,8 +17,6 @@ export class AuthService {
   console.log(loginInfo);
   return this.http.post('/api/login', loginInfo, options)
       .pipe(tap(data => {
-// tslint:disable-next-line: no-string-literal
-// tslint:disable-next-line: no-angle-bracket-type-assertion
         this.currentUser = <IUser> data['user'];
       })).pipe(catchError(err => {
         return of(false);
@@ -27,6 +25,8 @@ export class AuthService {
   updateCurrentUser(firstName: string, lastName: string) {
     this.currentUser.firstName = firstName;
     this.currentUser.lastName = lastName;
+    const options = { headers: new HttpHeaders({'Content-Type': 'application/json'}) };
+    return this.http.put(`/api/users/${this.currentUser.id}`, this.currentUser, options);
 
   }
   isAuthenticated() {
