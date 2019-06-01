@@ -26,7 +26,7 @@ export class LoginComponent {
     } else {
   this.router.navigate(['events']);
     }
-  })
+  });
   }
 
   cancel() {

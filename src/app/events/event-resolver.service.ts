@@ -9,6 +9,6 @@ import { map } from 'rxjs/operators';
 export class EventResolverService implements Resolve<any> {
   constructor(private eventService: EventService) { }
   resolve(route: ActivatedRouteSnapshot) {
-    return this.eventService.getEvent(route.params['id']);
+    return this.eventService.getEvent(route.params.id);
   }
 }

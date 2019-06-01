@@ -17,7 +17,7 @@ export class EventsDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.forEach((data) => {
-      this.event = data['event'];
+      this.event = data.event;
       this.addMode = false;
       });
     }
