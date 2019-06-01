@@ -10,7 +10,7 @@ import {
   EventResolverService
 } from './events/index';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: 'events/new', component: CreateEventComponent, canDeactivate: ['canDeactivateCreateEvent'] },
   { path: 'events', component: EventsListComponent, resolve: {events: EventListResolverService} },
   { path: 'events/:id', component: EventsDetailsComponent, resolve: {event: EventResolverService} },

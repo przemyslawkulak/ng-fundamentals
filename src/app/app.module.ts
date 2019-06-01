@@ -28,6 +28,8 @@ import { CollapsibleWellComponent } from './common/collapsible-well.component';
 import { SimpleModalComponent } from './common/simpleModal.component';
 import { ModalTriggerDirective } from './common/modal-trigger.directive';
 import { VoterService } from './events/events-details/voter.service';
+import { RouterModule, PreloadAllModules } from '@angular/router';
+import { routes} from './app-routing.module'
 
 
 // tslint:disable-next-line: no-string-literal
@@ -58,6 +60,7 @@ const jQuery = window['$'];
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules}),
     HttpClientModule
   ],
   providers: [

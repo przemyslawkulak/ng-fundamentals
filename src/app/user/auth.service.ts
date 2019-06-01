@@ -12,12 +12,12 @@ export class AuthService {
 
   loginUser(userName: string, password: string) {
 
-  const loginInfo = { username: userName, password};
+  const loginInfo = { username: userName, password: password};
   const options = { headers: new HttpHeaders({'Content-Type': 'application/json'}) };
   console.log(loginInfo);
   return this.http.post('/api/login', loginInfo, options)
       .pipe(tap(data => {
-        this.currentUser = data.user as IUser;
+        this.currentUser = <IUser>data['user'];
       })).pipe(catchError(err => {
         return of(false);
       }));
@@ -36,7 +36,7 @@ export class AuthService {
     this.http.get('/api/currentIdentity')
     .pipe(tap(data => {
       if (data instanceof Object) {
-        this.currentUser = <IUser> data['user'];
+        this.currentUser = <IUser> data;
       }
     }))
     .subscribe();
